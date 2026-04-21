@@ -11,7 +11,8 @@
     a { color: #222; }
     .game { margin-top: 48px; }
     .game h2 { font-size: 20px; margin-bottom: 6px; }
-    .badge img { height: 44px; margin-top: 12px; }
+    .badges { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .badges img { height: 44px; }
     small { color: #999; font-size: 13px; }
   </style>
 </head>
@@ -22,7 +23,9 @@
   <div class="game">
     <h2>Nevermind!</h2>
     <p>A simple, satisfying puzzle game. Tap tiles to match — let the wave do the rest.</p>
-    <div class="badge">
+    <div class="badges">
+      <!-- Replace href with Google Play link when available -->
+      <a href="#"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height:60px;margin-left:-8px"></a>
       <!-- Replace href with App Store link when available -->
       <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
     </div>
