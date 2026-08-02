@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mighty IT is a decision card game about leading a software project through impossible tradeoffs.">
+  <title>Mighty IT — Lead the project. Make the calls.</title>
+  <style>
+    :root { color-scheme: light; --ink: #1a1a25; --muted: #666676; --mint: #42ae80; --paper: #f5f4f0; --card: #fff; --line: #dddde6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; }
+    .wordmark { font-weight: 800; letter-spacing: .24em; text-decoration: none; }
+    nav { display: flex; gap: 20px; font-size: 14px; }
+    .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; padding: 64px 0 88px; }
+    .eyebrow { color: var(--mint); font-size: 13px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+    h1 { max-width: 720px; margin: 16px 0 20px; font-size: clamp(46px, 7vw, 82px); line-height: .98; letter-spacing: -.045em; }
+    .lead { max-width: 610px; margin: 0 0 28px; color: var(--muted); font-size: clamp(18px, 2.5vw, 22px); }
+    .badges { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .store { display: inline-flex; flex-direction: column; gap: 5px; text-decoration: none; }
+    .store img { display: block; height: 48px; width: auto; }
+    .store.google img { height: 64px; margin: -8px; }
+    .status { color: var(--muted); font-size: 12px; text-align: center; }
+    .icon { width: min(100%, 390px); aspect-ratio: 1; justify-self: end; border-radius: 28%; box-shadow: 0 30px 80px rgb(26 26 37 / 18%); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-bottom: 92px; }
+    .feature { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: rgb(255 255 255 / 55%); }
+    .feature strong { display: block; margin-bottom: 6px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .screens { padding: 76px 0; background: #202027; color: #fff; overflow: hidden; }
+    .screens h2 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 52px); }
+    .screens .intro { margin: 0 0 34px; color: #b9b9c4; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .gallery img { display: block; width: 100%; border-radius: 18px; box-shadow: 0 28px 65px rgb(0 0 0 / 38%); }
+    footer { display: flex; justify-content: space-between; gap: 24px; padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+    footer p { margin: 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 18px; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 38px; padding-top: 32px; }
+      .icon { width: 250px; justify-self: start; }
+      .features { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(3, 78%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; }
+      .gallery img { scroll-snap-align: start; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="wordmark" href="/">FFEATURESQUE</a>
+      <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div class="eyebrow">Decision card game</div>
+        <h1>Lead the project. Make the calls.</h1>
+        <p class="lead">Survive impossible deadlines, production incidents, stakeholder demands, and the delayed consequences of every decision.</p>
+        <div class="badges">
+          <a class="store" href="https://apps.apple.com/app/id6797202749" aria-label="Download Mighty IT on the App Store">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            <span class="status">Coming soon</span>
+          </a>
+          <a class="store google" href="https://play.google.com/store/apps/details?id=com.featuresque.mightyit" aria-label="Get Mighty IT on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            <span class="status">Internal testing</span>
+          </a>
+        </div>
+      </div>
+      <img class="icon" src="assets/icon.png" alt="Mighty IT app icon">
+    </main>
+
+    <section class="features" aria-label="Game features">
+      <div class="feature"><strong>296 decisions</strong><p>Project situations spanning scope, people, architecture, incidents, delivery, and stakeholders.</p></div>
+      <div class="feature"><strong>Consequences that follow you</strong><p>Hidden stats, delayed effects, and follow-up decisions turn every run into a different project.</p></div>
+      <div class="feature"><strong>30 distinct endings</strong><p>Ship successfully, fail spectacularly, and discover the kind of technology leader your choices create.</p></div>
+    </section>
+  </div>
+
+  <section class="screens">
+    <div class="wrap">
+      <h2>Try not to break everything.</h2>
+      <p class="intro">Balance budget, timeline, code health, and team morale. Push any one too far and the project can unravel.</p>
+      <div class="gallery">
+        <img src="assets/screenshot-1.png" alt="Mighty IT home screen">
+        <img src="assets/screenshot-2.png" alt="A decision card in Mighty IT">
+        <img src="assets/screenshot-3.png" alt="A successful Mighty IT project ending">
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <p>&copy; 2026 ffeaturesque</p>
+      <div class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:ffeaturesque@gmail.com">Contact</a></div>
+    </footer>
+  </div>
+</body>
+</html>
